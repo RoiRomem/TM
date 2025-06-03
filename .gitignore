@@ -1,0 +1,63 @@
+## Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+*.log
+
+## VS Code
+.vscode/
+
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Mono Auto Generated Files
+mono_crash.*
+
+## NuGet
+*.nupkg
+*.snupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## ASP.NET stuff
+appsettings*.json
+
+## Rider IDE
+.idea/
+*.sln.iml
+
+## dotCover
+*.dotCover
+
+## Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+## VS Mac
+.vscode/
+.idea/
+*.sln.ide
+
+## Others
+*.tmp
+*.bak
+*.swp
+*.DS_Store
+Thumbs.db
+
+# Don't track build artifacts
+*.exe
+*.dll
+*.pdb
+*.cache
+*.mdb
+*.db
+
+## Local test config
+testresults/
