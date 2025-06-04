@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace TM
+﻿namespace TM
 {
     public static class main
     {
@@ -65,6 +63,28 @@ namespace TM
                     if (tasks.Count == 0) break;
                     tasks.RemoveAt(currentIndex);
                     if (currentIndex >= tasks.Count) currentIndex = tasks.Count - 1;
+                    break;
+
+                case 'f':
+                {
+                    var original = tasks[currentIndex].Task;
+                    tasks[currentIndex].Task = util.PlaceHolder(tasks[currentIndex].Task, "Task Name: ");
+                    if(tasks[currentIndex].Task == "")
+                    {
+                        tasks[currentIndex].Task = original;
+                        break;
+                    }
+                    tasks[currentIndex].FinishDate = util.PlaceHolder(tasks[currentIndex].FinishDate ?? "", "Due Date: ");
+                    if (tasks[currentIndex].FinishDate == "") tasks[currentIndex].FinishDate = null;
+                    break;
+                }
+                
+                case '/':
+                    util.Grep(tasks, ref currentIndex);
+                    break;
+                
+                case ':':
+                    // here we should to the get line thinga magina
                     break;
             }
         }
